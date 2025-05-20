@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tela_login.unity
+    path: "Assets/Scenes/Prot\xF3tipo Luna/Tela_login.unity"
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
-    path: Assets/Scenes/Tela_cadastro.unity
+    path: "Assets/Scenes/Prot\xF3tipo Luna/Tela_cadastro.unity"
     guid: 6ab146d5fedc491478c384a526641fbb
   - enabled: 1
-    path: Assets/Scenes/Tela_inicio.unity
+    path: "Assets/Scenes/Prot\xF3tipo Luna/Tela_inicio.unity"
     guid: 333cf9dcbdc78894fac39111541397e0
   - enabled: 1
-    path: Assets/Scenes/Tela Esqueceu Senha.unity
+    path: "Assets/Scenes/Prot\xF3tipo Luna/Tela Esqueceu Senha.unity"
     guid: 2605fb6bcd97da14e878a4e77b94560a
   - enabled: 1
-    path: Assets/Scenes/Tela_questionario.unity
+    path: "Assets/Scenes/Prot\xF3tipo Luna/Tela_questionario.unity"
     guid: c2fe331cb26ac074b93a27508e095e42
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
