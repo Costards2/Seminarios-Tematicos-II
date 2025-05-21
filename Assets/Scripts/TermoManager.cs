@@ -8,6 +8,7 @@ public class TermoManager : MonoBehaviour
 {
     public Toggle aceito;
     public TMP_Text erro;
+    public string cena;
 
     public void Continuar()
     {
@@ -15,7 +16,7 @@ public class TermoManager : MonoBehaviour
         
         if (aceito)
         {
-            SceneManager.LoadScene("Tela_Questionario");
+            CenaParaLoad(cena);
         }
         else
         {
@@ -28,5 +29,9 @@ public class TermoManager : MonoBehaviour
     {
         SceneManager.LoadScene("Tela_Menu");
     }
-    
+
+    public void CenaParaLoad(string cena)
+    {
+        SceneManager.LoadScene(cena);
+    }
 }

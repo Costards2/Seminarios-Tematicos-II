@@ -15,7 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Tela_Questionario.unity
     guid: 512e244b0fe405a4da37cd7ed3dc11fd
   - enabled: 1
-    path: Assets/Scenes/Tela_Termos.unity
+    path: Assets/Scenes/Tela_Termos_Adulto.unity
     guid: efc3a586521c5624296a7fb0188c88b1
+  - enabled: 1
+    path: Assets/Scenes/Tela_Termos_Adolescente.unity
+    guid: adbfaceee8bb6514a9a3286cc1066678
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

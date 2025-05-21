@@ -945,6 +945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aceito: {fileID: 1871368671}
   erro: {fileID: 2016545429}
+  cena: Tela_Termos_Adolescente
 --- !u!224 &1359602452
 RectTransform:
   m_ObjectHideFlags: 0
