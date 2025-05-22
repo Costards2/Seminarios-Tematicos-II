@@ -34,7 +34,7 @@ public class FilterManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        
     }
 
     void Start()
@@ -85,6 +85,7 @@ public class FilterManager : MonoBehaviour
         if (idadeMin <= idadeMax && (isWoman || isMan) == true) 
         {
             SceneManager.LoadScene(nextSceneName);
+            DontDestroyOnLoad(this.gameObject);
         }
         
     }
