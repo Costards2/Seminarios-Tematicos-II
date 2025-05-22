@@ -27,7 +27,16 @@ public class FilterManager : MonoBehaviour
     public bool isWoman;
     public bool isMan;
 
-    // Start is called before the first frame update
+
+    /*[Header("Filtros")]
+    [Tooltip("GameObject que carregará as informações de filtro para a cena seguinte")]
+    [SerializeField] GameObject filters;*/
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         GenderOption.onValueChanged.AddListener(indexDropdown);

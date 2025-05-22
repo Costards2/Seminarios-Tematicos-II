@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
+
 
 public class Manager : MonoBehaviour
 {
-
     [SerializeField] private int questID;
     private int questnumber;
     
@@ -14,8 +15,13 @@ public class Manager : MonoBehaviour
     [SerializeField] private Button proximo;
     [SerializeField] private Button anterior;
 
-    [Header("CenaMenu")]
-    [SerializeField] private string menuNameScene;
+    public UnityEvent OnChangeIndex;
+
+    private FilterManager filter;
+    public int idadeMin;
+    public int idadeMax;
+    public bool isWoman;
+    public bool isMan;
 
     void Start()
     {
@@ -23,7 +29,14 @@ public class Manager : MonoBehaviour
         questID = 0;
         questnumber = 5;
 
+        // Pegando as informações de filtro do objeto FilterManage da cena Tela_filter
+        filter = FindAnyObjectByType<FilterManager>();
 
+        if (filter != null) 
+        {
+            idadeMin = filter.idadeMin; idadeMax = filter.idadeMax; isWoman = filter.isWoman; isMan = filter.isMan;
+            Destroy(filter.gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -51,13 +64,15 @@ public class Manager : MonoBehaviour
     public void NextButtom() 
     {
         questID++;
+        OnChangeIndex.Invoke();
     }
     public void PreviewButtom()
     {
         questID--;
+        OnChangeIndex.Invoke();
     }
-    public void ExitButtom()
+    public void Scene(string nameScene)
     {
-        SceneManager.LoadScene(menuNameScene);
+        SceneManager.LoadScene(nameScene);
     }
 }
