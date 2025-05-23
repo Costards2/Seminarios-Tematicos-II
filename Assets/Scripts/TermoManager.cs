@@ -16,7 +16,7 @@ public class TermoManager : MonoBehaviour
         
         if (aceito)
         {
-            CenaParaLoad(cena);
+            AppManager.instance.CenaParaLoad(cena);
         }
         else
         {
@@ -25,13 +25,4 @@ public class TermoManager : MonoBehaviour
         }
     }
     
-    public void Voltar()
-    {
-        SceneManager.LoadScene("Tela_Menu");
-    }
-
-    public void CenaParaLoad(string cena)
-    {
-        SceneManager.LoadScene(cena);
-    }
 }

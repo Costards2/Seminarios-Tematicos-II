@@ -415,16 +415,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1359602451}
-        m_TargetAssemblyTypeName: TermoManager, Assembly-CSharp
-        m_MethodName: Voltar
-        m_Mode: 1
+      - m_Target: {fileID: 491541054679296035, guid: ed07d00aaa47aab48b0053ad5be45290, type: 3}
+        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
+        m_MethodName: CenaParaLoad
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Tela_Menu
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &480762568
@@ -1057,7 +1057,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Tela_Questionario
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1601490297
@@ -1589,6 +1589,63 @@ RectTransform:
   m_AnchoredPosition: {x: -465, y: -695}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &2111346065
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6834488
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1354601
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 421.45944
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4218538584069445091, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7185885654717544330, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
+      propertyPath: m_Name
+      value: ManagerLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3cbae83261b7a245b14fdaf05675099, type: 3}
 --- !u!1 &2118403047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1672,3 +1729,4 @@ SceneRoots:
   - {fileID: 1338792956}
   - {fileID: 714081358}
   - {fileID: 1359602452}
+  - {fileID: 2111346065}
