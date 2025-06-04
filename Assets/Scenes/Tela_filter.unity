@@ -509,7 +509,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012767127}
+      - m_Target: {fileID: 1649205570}
         m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012767127}
+      - m_Target: {fileID: 1649205570}
         m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
         m_MethodName: ChangeMinValue
         m_Mode: 1
@@ -2538,9 +2538,9 @@ MonoBehaviour:
     m_Options:
     - m_Text: ' '
       m_Image: {fileID: 0}
-    - m_Text: Masculino
-      m_Image: {fileID: 0}
     - m_Text: Feminino
+      m_Image: {fileID: 0}
+    - m_Text: Masculino
       m_Image: {fileID: 0}
     - m_Text: Ambos
       m_Image: {fileID: 0}
@@ -2819,7 +2819,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012767127}
+      - m_Target: {fileID: 1649205570}
         m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
         m_MethodName: Next
         m_Mode: 1
@@ -2959,6 +2959,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!1 &1649205569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1649205571}
+  - component: {fileID: 1649205570}
+  m_Layer: 0
+  m_Name: FilterManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1649205570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649205569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39580e755b2a634e872bb3e9d8b7cf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Tela_Inicial 1
+  nextSceneName: Tela_Resultados
+  textMin: {fileID: 1001044298}
+  textMax: {fileID: 46080806}
+  sliderMin: {fileID: 1020323012}
+  sliderMax: {fileID: 1875103159}
+  idadeMin: 0
+  idadeMax: 0
+  GenderOption: {fileID: 1461887602}
+  isWoman: 0
+  isMan: 0
+--- !u!4 &1649205571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649205569}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1679743419
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,7 +3548,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2012767127}
+      - m_Target: {fileID: 1649205570}
         m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
         m_MethodName: ChangeMaxValue
         m_Mode: 1
@@ -3580,61 +3635,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986373021}
   m_CullTransparentMesh: 1
---- !u!1 &2012767126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2012767128}
-  - component: {fileID: 2012767127}
-  m_Layer: 0
-  m_Name: FilterManage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2012767127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012767126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e39580e755b2a634e872bb3e9d8b7cf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Tela_Inicial 1
-  nextSceneName: Tela_Resultado
-  textMin: {fileID: 1001044298}
-  textMax: {fileID: 46080806}
-  sliderMin: {fileID: 1020323012}
-  sliderMax: {fileID: 1875103159}
-  idadeMin: 0
-  idadeMax: 0
-  GenderOption: {fileID: 1461887602}
-  isWoman: 0
-  isMan: 0
---- !u!4 &2012767128
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2012767126}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044518123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3826,4 +3826,4 @@ SceneRoots:
   - {fileID: 1742010966}
   - {fileID: 512089426}
   - {fileID: 266887521}
-  - {fileID: 2012767128}
+  - {fileID: 1649205571}

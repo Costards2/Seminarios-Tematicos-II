@@ -34,7 +34,8 @@ public class FilterManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        Debug.Log("FilterManager instanciado");
+        DontDestroyOnLoad(this.gameObject);
     }
 
     void Start()
@@ -43,23 +44,35 @@ public class FilterManager : MonoBehaviour
         isWoman = false;
         isMan = false;
         idadeMin = 0;
-        idadeMax = 99;
+        idadeMax = 18;
+
     }
 
     public void indexDropdown(int index) 
     {
-        if (index == 1) 
+        switch (index) 
         {
-            isWoman = true;
-        }
-        else if (index == 2) 
-        {
-            isMan = true;
-        }
-        else
-        {
-            isWoman = true;
-            isMan = true;
+            case 0:
+                isWoman = false;
+                isMan = false;
+                break;
+            case 1:
+                isWoman = true;
+                isMan = false;
+                break;
+            case 2:
+                isWoman = false;
+                isMan = true;
+                break;
+            case 3:
+                isWoman = true;
+                isMan = true;
+                break;
+            default:
+                isWoman = false;
+                isMan = false;
+                break;
+
         }
     }
 
