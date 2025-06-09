@@ -5,31 +5,84 @@ using UnityEngine;
 
 public static class JsonManager
 {
-    // Store the questionnaire in the persistent data path (ideal for saved user data)
-    private static string jsonFilePath = Path.Combine(Application.persistentDataPath, "questionnaire.json");
+    private static string filePath = Path.Combine(Application.persistentDataPath, "questionnaire.json");
 
-    // Save questionnaire to JSON file
     public static void SaveQuestionnaireData(Questionnaire questionnaire)
     {
-        string jsonData = JsonUtility.ToJson(questionnaire, true);
-        File.WriteAllText(jsonFilePath, jsonData);
-        Debug.Log("Questionnaire data saved to: " + jsonFilePath);
+        string json = JsonUtility.ToJson(questionnaire, true);
+        File.WriteAllText(filePath, json);
+        Debug.Log("Questionnaire saved to persistentDataPath.");
     }
 
-    // Load questionnaire from JSON file
     public static Questionnaire LoadQuestionnaireData()
     {
-        if (File.Exists(jsonFilePath))
+        if (!File.Exists(filePath))
         {
-            string jsonData = File.ReadAllText(jsonFilePath);
-            Questionnaire questionnaire = JsonUtility.FromJson<Questionnaire>(jsonData);
-            Debug.Log("Questionnaire data loaded from: " + jsonFilePath);
-            return questionnaire;
+            Debug.LogWarning("Persistent questionnaire not found, syncing from Resources...");
+            SyncQuestionnaireFromResources(true);
+        }
+
+        string json = File.ReadAllText(filePath);
+        return JsonUtility.FromJson<Questionnaire>(json);
+    }
+
+    public static void SyncQuestionnaireFromResources(bool force = false)
+    {
+        if (File.Exists(filePath) && !force)
+        {
+            Debug.Log("Persistent questionnaire already exists. Skipping sync.");
+            return;
+        }
+
+        TextAsset resourceFile = Resources.Load<TextAsset>("questionnaire");
+        if (resourceFile == null)
+        {
+            Debug.LogError("questionnaire.json not found in Resources!");
+            return;
+        }
+
+        File.WriteAllText(filePath, resourceFile.text);
+        Debug.Log("Questionnaire synced from Resources to persistent path.");
+    }
+
+    public static void SyncIfQuestionnaireOutdated()
+    {
+        TextAsset resourceFile = Resources.Load<TextAsset>("questionnaire");
+        if (resourceFile == null)
+        {
+            Debug.LogError("questionnaire.json not found in Resources!");
+            return;
+        }
+
+        Questionnaire resourceQuestionnaire = JsonUtility.FromJson<Questionnaire>(resourceFile.text);
+
+        Questionnaire persistentQuestionnaire = null;
+        if (File.Exists(filePath))
+        {
+            string persistentJson = File.ReadAllText(filePath);
+            persistentQuestionnaire = JsonUtility.FromJson<Questionnaire>(persistentJson);
+        }
+
+        int lastResourceID = GetLastQuestionID(resourceQuestionnaire);
+        int lastPersistentID = GetLastQuestionID(persistentQuestionnaire);
+
+        if (lastResourceID != lastPersistentID)
+        {
+            Debug.LogWarning($"Outdated questionnaire detected. Resources (lastID={lastResourceID}) ≠ Persistent (lastID={lastPersistentID}). Syncing...");
+            SyncQuestionnaireFromResources(true);
         }
         else
         {
-            Debug.LogWarning("File not found: " + jsonFilePath);
-            return new Questionnaire();
+            Debug.Log("Questionnaire is up to date.");
         }
+    }
+
+    private static int GetLastQuestionID(Questionnaire questionnaire)
+    {
+        if (questionnaire == null || questionnaire.questions == null || questionnaire.questions.Count == 0)
+            return -1;
+
+        questionnaire.questions.Sort((a, b) => a.questionID.CompareTo(b.questionID));
+        return questionnaire.questions[^1].questionID;
     }
 }

@@ -8,22 +8,25 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Load from JSON file
+        // Carrega os dados do questionário do arquivo JSON
+        JsonManager.SyncIfQuestionnaireOutdated();
         questionnaire = JsonManager.LoadQuestionnaireData();
 
-        // Only add if it's empty (avoids duplicating on every launch)
+        // Cria um questionário com perguntas de exemplo se não houver perguntas carregadas
         if (questionnaire.questions == null || questionnaire.questions.Count == 0)
         {
             AddSampleQuestions();
             SaveQuestionnaireData();
         }
 
-        DisplayQuestions();
+        Questionnaire all = DisplayQuestions();
+        Questionnaire single = DisplayQuestions(5);
+        Questionnaire range = DisplayQuestions(4, 7);
     }
 
     void AddSampleQuestions()
     {
-        questionnaire = new Questionnaire(); // Ensure it's initialized
+        questionnaire = new Questionnaire();
 
         questionnaire.AddQuestion(1, "Qual o seu nome?", new List<string>(), "text");
         questionnaire.AddQuestion(2, "Qual a sua idade?", new List<string> { "13 a 15 anos", "16 a 18 anos" }, "multipleChoice");
@@ -47,22 +50,82 @@ public class GameManager : MonoBehaviour
         }, "multipleChoice");
     }
 
-    void DisplayQuestions()
+    // 1. Pega todas as perguntas
+    Questionnaire DisplayQuestions()
     {
+        Questionnaire result = new Questionnaire();
+
         foreach (var question in questionnaire.questions)
         {
-            Debug.Log($"Question: {question.questionText}");
-            if (question.options != null && question.options.Count > 0)
+            DisplaySingleQuestion(question);
+            result.questions.Add(question);
+        }
+
+        return result;
+    }
+
+    // 2. Pega uma pergunta específica por ID
+    Questionnaire DisplayQuestions(int questionID)
+    {
+        Questionnaire result = new Questionnaire();
+
+        var question = questionnaire.questions.Find(q => q.questionID == questionID);
+        if (question != null)
+        {
+            DisplaySingleQuestion(question);
+            result.questions.Add(question);
+        }
+        else
+        {
+            Debug.LogWarning($"Question with ID {questionID} not found.");
+        }
+
+        return result;
+    }
+
+    // 3. Pega um intervalo de perguntas por ID
+    Questionnaire DisplayQuestions(int fromID, int toID)
+    {
+        Questionnaire result = new Questionnaire();
+
+        if (fromID > toID)
+        {
+            Debug.LogWarning("Invalid range: fromID is greater than toID.");
+            return result;
+        }
+
+        var range = questionnaire.questions.FindAll(q => q.questionID >= fromID && q.questionID <= toID);
+
+        if (range.Count == 0)
+        {
+            Debug.LogWarning($"No questions found in range {fromID} to {toID}.");
+            return result;
+        }
+
+        foreach (var question in range)
+        {
+            DisplaySingleQuestion(question);
+            result.questions.Add(question);
+        }
+
+        return result;
+    }
+
+    //Esse método aqui é só pra não repetir código nos três de cima
+    void DisplaySingleQuestion(Question question)
+    {
+        Debug.Log($"Question {question.questionID}: {question.questionText}");
+
+        if (question.options != null && question.options.Count > 0)
+        {
+            foreach (var option in question.options)
             {
-                foreach (var option in question.options)
-                {
-                    Debug.Log($"Option: {option}");
-                }
+                Debug.Log($"Option: {option}");
             }
-            else
-            {
-                Debug.Log("Open-ended question.");
-            }
+        }
+        else
+        {
+            Debug.Log("Open-ended question.");
         }
     }
 
@@ -70,5 +133,19 @@ public class GameManager : MonoBehaviour
     {
         JsonManager.SaveQuestionnaireData(questionnaire);
         Debug.Log("Questionnaire saved.");
+    }
+
+    void SaveSampleUserAnswers()
+    {
+        UserResponse user = new UserResponse("user001");
+
+        user.answers.Add(new Answer(1, "João"));
+        user.answers.Add(new Answer(2, "16 a 18 anos"));
+        user.answers.Add(new Answer(3, "Masculino"));
+        user.answers.Add(new Answer(4, "Parda"));
+        user.answers.Add(new Answer(5, "Computador"));
+        user.answers.Add(new Answer(6, "Entre 8 e 14 horas por semana"));
+
+        UserResponseManager.SaveUserResponse(user);
     }
 }
