@@ -43,7 +43,7 @@ public class FilterManager : MonoBehaviour
         GenderOption.onValueChanged.AddListener(indexDropdown);
         isWoman = false;
         isMan = false;
-        idadeMin = 0;
+        idadeMin = 13;
         idadeMax = 18;
 
     }
