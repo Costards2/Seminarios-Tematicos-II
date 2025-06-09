@@ -1,19 +1,31 @@
 {
     "questions": [
         {
+            "questionID": 0,
+            "questionText": "CPF do Adulto:",
+            "options": [],
+            "type": "text"
+        },
+        {
             "questionID": 1,
-            "questionText": "Nome:",
+            "questionText": "CPF da Criança:",
             "options": [],
             "type": "text"
         },
         {
             "questionID": 2,
+            "questionText": "Nome:",
+            "options": [],
+            "type": "text"
+        },
+        {
+            "questionID": 3,
             "questionText": "Idade:",
             "options": ["13 a 15 anos", "16 a 18 anos"],
             "type": "multipleChoice"
         },
         {
-            "questionID": 3,
+            "questionID": 4,
             "questionText": "Identidade de gênero:",
             "options": [
                 "Agênero", "Feminino", "Gênero-fluido", "Homem trans", "Intersexo",
@@ -23,19 +35,19 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 4,
+            "questionID": 5,
             "questionText": "Etnia (Opcional) (Sensível)",
             "options": ["Amarela", "Branca", "Indígena", "Parda", "Preta"],
             "type": "multipleChoice"
         },
         {
-            "questionID": 5,
+            "questionID": 6,
             "questionText": "Qual dispositivo você usa com mais frequência para jogar?",
             "options": ["Dispositivos móveis (como celulares e tablets)", "Computador", "Console", "Outro"],
             "type": "multipleChoice"
         },
         {
-            "questionID": 6,
+            "questionID": 7,
             "questionText": "Quanto tempo em média você joga semanalmente?",
             "options": [
                 "Menos de 3 horas por semana",
@@ -47,7 +59,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 7,
+            "questionID": 8,
             "questionText": "Você sabe o que são dados sensíveis?",
             "options": [
                 "São dados mais pessoais, como minha religião, saúde, orientação sexual ou opinião política.",
@@ -59,7 +71,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 8,
+            "questionID": 9,
             "questionText": "Você sabe que tipo de informações (como localização, dispositivo ou tempo de jogo) são pelos jogos que você joga?",
             "options": [
                 "Sim, sei exatamente quais dados eles coletam",
@@ -71,7 +83,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 9,
+            "questionID": 10,
             "questionText": "Você já leu as políticas de privacidade de apps, sites ou jogos antes de aceitá-las?",
             "options": [
                 "Sim, sempre leio",
@@ -83,7 +95,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 10,
+            "questionID": 11,
             "questionText": "Você e seus responsáveis ou professores já conversaram sobre como proteger seus dados enquanto você joga online?",
             "options": [
                 "Sim, conversamos bastante sobre isso.",
@@ -95,7 +107,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 11,
+            "questionID": 12,
             "questionText": "Como você escolhe com quem jogar online?",
             "options": [
                 "Só jogo com amigos ou pessoas conhecidas",
@@ -107,7 +119,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 12,
+            "questionID": 13,
             "questionText": "Você já usou plataformas externas como Discord ou WhatsApp para falar com outros jogadores? Como se sente em relação à segurança nesses espaços?",
             "options": [
                 "Me sinto seguro(a)",
@@ -119,7 +131,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 13,
+            "questionID": 14,
             "questionText": "Você já teve medo de que alguém pudesse usar informações do jogo para te encontrar ou prejudicar fora dele?",
             "options": [
                 "Sim, já tive medo",
@@ -131,7 +143,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 14,
+            "questionID": 15,
             "questionText": "Você já sofreu algum tipo de violência, agressão ou abuso nos jogos, ou em comunidades relacionadas?",
             "options": [
                 "Sim, frequentemente",
@@ -143,7 +155,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 15,
+            "questionID": 16,
             "questionText": "Como você reagiu ou reagiria sendo vítima de violência online?",
             "options": [
                 "Denunciaria imediatamente",
@@ -155,7 +167,7 @@
             "type": "multipleChoice"
         },
         {
-            "questionID": 16,
+            "questionID": 17,
             "questionText": "O que você acha que deveria ser feito para melhorar a segurança e proteção das crianças e adolescentes nos jogos digitais?",
             "options": [
                 "Criar mais jogos educativos sobre proteção de dados.",
