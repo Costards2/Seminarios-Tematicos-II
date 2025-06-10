@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
         Questionnaire all = DisplayQuestions();
         Questionnaire single = DisplayQuestions(5);
         Questionnaire range = DisplayQuestions(4, 7);
+
+        SaveSampleUserAnswers();
     }
 
     void AddSampleQuestions()
@@ -137,14 +139,16 @@ public class GameManager : MonoBehaviour
 
     void SaveSampleUserAnswers()
     {
-        UserResponse user = new UserResponse("user001");
+        UserResponse user = new UserResponse("user003");
 
-        user.answers.Add(new Answer(1, "João"));
-        user.answers.Add(new Answer(2, "16 a 18 anos"));
-        user.answers.Add(new Answer(3, "Masculino"));
-        user.answers.Add(new Answer(4, "Parda"));
-        user.answers.Add(new Answer(5, "Computador"));
-        user.answers.Add(new Answer(6, "Entre 8 e 14 horas por semana"));
+        user.answers.Add(new Answer(0, "0"));
+        user.answers.Add(new Answer(1, "0"));
+        user.answers.Add(new Answer(2, "Marcela"));
+        user.answers.Add(new Answer(3, "13 a 15 anos"));
+        user.answers.Add(new Answer(4, "Feminino"));
+        user.answers.Add(new Answer(5, "Branca"));
+        user.answers.Add(new Answer(6, "Console"));
+        user.answers.Add(new Answer(7, "Menos de 3 horas por semana"));
 
         UserResponseManager.SaveUserResponse(user);
     }
