@@ -43,8 +43,8 @@ public class FilterManager : MonoBehaviour
         GenderOption.onValueChanged.AddListener(indexDropdown);
         isWoman = false;
         isMan = false;
-        idadeMin = 0;
-        idadeMax = 18;
+        idadeMin = 13;
+        idadeMax = 15;
 
     }
 
@@ -101,5 +101,19 @@ public class FilterManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
         
+    }
+
+    public void toggleAge(bool age1) 
+    {
+        if (age1)
+        {
+            idadeMin = 13;
+            idadeMax = 15;
+        }
+        else 
+        {
+            idadeMin = 16;
+            idadeMax = 18;
+        }
     }
 }

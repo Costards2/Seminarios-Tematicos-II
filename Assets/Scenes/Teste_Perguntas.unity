@@ -224,6 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2022519153}
   - component: {fileID: 2022519152}
+  - component: {fileID: 2022519154}
   m_Layer: 0
   m_Name: TesteDeScripts
   m_TagString: Untagged
@@ -243,8 +244,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea9130defe4329f4ba0fe30570e3874f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionnaire:
-    questions: []
 --- !u!4 &2022519153
 Transform:
   m_ObjectHideFlags: 0
@@ -260,6 +259,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2022519154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2022519151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed7a710cf8acca4ba366f52cac753df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionnaire:
+    questions: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

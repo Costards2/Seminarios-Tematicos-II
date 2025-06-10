@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Events;
+using System.IO;
+
 
 
 public class Manager : MonoBehaviour
@@ -15,7 +17,7 @@ public class Manager : MonoBehaviour
     [SerializeField] private Button proximo;
     [SerializeField] private Button anterior;
 
-    public UnityEvent OnChangeIndex;
+    public SendResponseEvent SendResponse;
     public QuestEvent SendQuest;
 
     private FilterManager filter;
@@ -25,11 +27,16 @@ public class Manager : MonoBehaviour
     public bool isMan;
     [Tooltip("Aqui você coloca o id da primeira pergunta que você quer exibir nas respostas")][SerializeField] private int idInitial;
     [HideInInspector] public questionnaire actualQuestionnaire;
+    [HideInInspector] public UserResponseList responses;           // Lista contendo as respostas
+    [HideInInspector] public UserResponseList filteredResponse; // Lista contendo as respostas filtradas pela idade e sexo 
+    [HideInInspector] public UserResponseList fullFilteredList; // Lista contendo somente as questões relativas ao index atual (já está filtrada pela idade e sexo)
     [SerializeField] private string jsonName;
+    [SerializeField] private string jsonResponseName;
     QuestManager questManager;
 
     void Start()
-    {
+    {   
+        // Lê as quests
         ReadQuests();
 
         // Setando valores iniciais de variaveis
@@ -42,10 +49,11 @@ public class Manager : MonoBehaviour
             Destroy(filter.gameObject);
         }
 
+        ReadAndFilterAwnsers();
 
-
-        // Evento inicial
+        // Eventos iniciais
         SendQuest.Invoke(actualQuestionnaire.questions[idInitial]);
+        SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
 
     }
 
@@ -73,25 +81,89 @@ public class Manager : MonoBehaviour
 
     private void ReadQuests() 
     {
-        TextAsset jsonFile = Resources.Load<TextAsset>(jsonName);
-        if (jsonFile != null) 
-        {
-            actualQuestionnaire = JsonUtility.FromJson<questionnaire>(jsonFile.text);
-            Debug.Log("Quantidade de perguntas: " + questnumber);
-            Debug.Log("Primeira pergunta: " + actualQuestionnaire.questions[idInitial].questionText);
+ 
+        actualQuestionnaire = JsonUtility.FromJson<questionnaire>(LeitorDeJSON(jsonName));
+        questnumber = actualQuestionnaire.questions.Count - idInitial;
 
-        }
-        else 
+        /* Versão 1.0 do código de leitura ( lê o arquivo json da pasta ressources)
+          
+        TextAsset jsonFile = Resources.Load<TextAsset>(jsonName);
+        if (File.Exists(caminho)) 
+           
+                //actualQuestionnaire = JsonUtility.FromJson<questionnaire>(jsonFile.text);
+                //Debug.Log("Quantidade de perguntas: " + questnumber);
+                //Debug.Log("Primeira pergunta: " + actualQuestionnaire.questions[idInitial].questionText); 
+         */
+
+    }
+
+    private void ReadAndFilterAwnsers()
+    {
+        responses = JsonUtility.FromJson<UserResponseList>(LeitorDeJSON(jsonResponseName));
+
+        filteredResponse = new UserResponseList();
+
+        // olho todos os entrevistados
+        foreach(UserResponse response in responses.userResponses) 
         {
-            Debug.Log("Voce nao colocou o arquivo json na pasta Ressources ou nao colocou o nome do arquivo (sem a extensao) na variavel jsonfile");
-        }  
+            //olho todas as perguntas de cada entrevistado
+            foreach (Answer answer in response.answers) 
+            {
+                if (answer.response == "13 a 15 anos" & this.idadeMin <= 15) 
+                {
+                    for (int i = 0; i < response.answers.Count; i++)
+                    {
+                        if (response.answers[i].response == "Feminino" && isWoman)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                        if (response.answers[i].response == "Masculino" && isMan)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                    }
+                }
+                
+                if (answer.response == "16 a 18 anos" && this.idadeMin > 15)
+                {
+                    for (int i = 0; i < response.answers.Count; i++) 
+                    {
+                        if (response.answers[i].response == "Feminino" && isWoman) 
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                        if (response.answers[i].response == "Masculino" && isMan)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private string LeitorDeJSON(string fileName) 
+    {
+        string path = Path.Combine(Application.persistentDataPath, fileName + ".json");
+
+        if (File.Exists(path))
+        {
+            string json = File.ReadAllText(path);
+            return json;
+        }
+        else
+        {
+            Debug.Log("Arquivo não encontrado");
+            return null;
+        }
+
     }
 
     public void NextButtom() 
     {
         actualQuest++;
         SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]);
-        OnChangeIndex.Invoke();
+        SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
     }
 
     public void PreviewButtom()
@@ -99,8 +171,8 @@ public class Manager : MonoBehaviour
         if (actualQuest > idInitial) 
         {
             actualQuest--;
-            SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]);
-            OnChangeIndex.Invoke();
+            SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]); 
+            SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
         }
     }
     public void Scene(string nameScene)
@@ -108,6 +180,25 @@ public class Manager : MonoBehaviour
         SceneManager.LoadScene(nameScene);
     }
 
+    public IdexableAnswers actualAnswerList(UserResponseList filteredList, int index) 
+    {
+        IdexableAnswers sendableAnswersFiltered = new IdexableAnswers();
+        sendableAnswersFiltered.index = index;
+        sendableAnswersFiltered.sendableAnswers = new List<Answer>();
+
+        //Olho todos os entrevistados e pego as questões do index correto assim preenchendo o IdexableAnswers
+        
+        // Entrevistados
+        for (int i = 0; i < filteredList.userResponses.Count; i++)
+        {
+            //Questões das entrevistas
+            if (index < filteredList.userResponses[i].answers.Count)
+            {
+                sendableAnswersFiltered.sendableAnswers.Add(filteredList.userResponses[i].answers[index]);
+            }else return null;
+        }
+        return sendableAnswersFiltered;
+    }
 
     //---------------------------------------------------------------------------------------------------------
 
@@ -115,6 +206,9 @@ public class Manager : MonoBehaviour
     // Eventos personalidzdos
     [System.Serializable]
     public class QuestEvent : UnityEvent<Quest> { }
+
+    [System.Serializable]
+    public class SendResponseEvent : UnityEvent<IdexableAnswers> { }
 
 
     // Classes
@@ -125,6 +219,13 @@ public class Manager : MonoBehaviour
     }
 
  
+}
+
+[System.Serializable]
+public class IdexableAnswers
+{
+    public int index;
+    public List<Answer> sendableAnswers = new List<Answer>();
 }
 
 [System.Serializable]
