@@ -43,7 +43,7 @@
         {
             "questionID": 6,
             "questionText": "Qual dispositivo você usa com mais frequência para jogar?",
-            "options": ["Dispositivos móveis (como celulares e tablets)", "Computador", "Console", "Outro"],
+            "options": ["Dispositivos móveis (como celulares e tablets)", "Computador", "Console", "Outro", "Prefiro não responder"],
             "type": "multipleChoice"
         },
         {
