@@ -109,6 +109,20 @@ public class Manager : MonoBehaviour
             //olho todas as perguntas de cada entrevistado
             foreach (Answer answer in response.answers) 
             {
+                if (this.idadeMin <= 13 && this.idadeMax >= 18)
+                {
+                    for (int i = 0; i < response.answers.Count; i++)
+                    {
+                        if (response.answers[i].response == "Feminino" && isWoman)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                        if (response.answers[i].response == "Masculino" && isMan)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                    }
+                }
                 if (answer.response == "13 a 15 anos" & this.idadeMin <= 15) 
                 {
                     for (int i = 0; i < response.answers.Count; i++)

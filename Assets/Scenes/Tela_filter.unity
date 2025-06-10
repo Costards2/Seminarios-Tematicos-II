@@ -1282,7 +1282,19 @@ MonoBehaviour:
   m_Group: {fileID: 1349970506}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1649205570}
+        m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
+        m_MethodName: toggleAge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_IsOn: 0
 --- !u!1 &742261967
 GameObject:
@@ -1895,7 +1907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1349970502}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
   m_Name: 
@@ -2606,7 +2618,7 @@ MonoBehaviour:
       - m_Target: {fileID: 1649205570}
         m_TargetAssemblyTypeName: FilterManager, Assembly-CSharp
         m_MethodName: toggleAge
-        m_Mode: 0
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2615,7 +2627,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  m_IsOn: 1
+  m_IsOn: 0
 --- !u!1 &1634069318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,6 +2753,8 @@ MonoBehaviour:
   textMax: {fileID: 0}
   sliderMin: {fileID: 0}
   sliderMax: {fileID: 0}
+  toggleAge1: {fileID: 1616088040}
+  toggleAge2: {fileID: 660138654}
   idadeMin: 0
   idadeMax: 0
   GenderOption: {fileID: 1461887602}
