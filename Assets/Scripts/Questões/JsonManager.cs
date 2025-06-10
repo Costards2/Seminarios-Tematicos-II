@@ -5,8 +5,8 @@ using UnityEngine;
 
 public static class JsonManager
 {
-    private static string filePath = Path.Combine(Application.persistentDataPath, "questionnaire.json");
-
+    private static string filePath = Path.Combine(Application.persistentDataPath, "questionnaire.json"); // Só funciona no Windows
+        
     public static void SaveQuestionnaireData(Questionnaire questionnaire)
     {
         string json = JsonUtility.ToJson(questionnaire, true);
