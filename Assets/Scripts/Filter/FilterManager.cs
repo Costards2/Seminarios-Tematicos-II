@@ -16,6 +16,9 @@ public class FilterManager : MonoBehaviour
 
     [SerializeField] Slider sliderMin;
     [SerializeField] Slider sliderMax;
+    [SerializeField] protected Toggle toggleAge1;
+    [SerializeField] protected Toggle toggleAge2;
+
 
     public int idadeMin;
     public int idadeMax;
@@ -44,7 +47,7 @@ public class FilterManager : MonoBehaviour
         isWoman = false;
         isMan = false;
         idadeMin = 13;
-        idadeMax = 15;
+        idadeMax = 18;
 
     }
 
@@ -103,16 +106,20 @@ public class FilterManager : MonoBehaviour
         
     }
 
-    public void toggleAge(bool age1) 
+    public void toggleAge() 
     {
-        if (age1)
+        if (toggleAge1.isOn && toggleAge2.isOn == false)
         {
             idadeMin = 13;
             idadeMax = 15;
         }
-        else 
+        else if (toggleAge1.isOn == false && toggleAge2.isOn)
         {
             idadeMin = 16;
+            idadeMax = 18;
+        }else 
+        {
+            idadeMin = 13;
             idadeMax = 18;
         }
     }
