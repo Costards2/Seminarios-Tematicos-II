@@ -3,16 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
 {
-    int currentQuestionID;
+    public int currentQuestionID;
     string baseQuestionTitle = "PERGUNTA #";
     
     [SerializeField] TextMeshProUGUI questionTitle; //Título
     [SerializeField] TextMeshProUGUI questionText; //Enunciado
-    [SerializeField] private GameObject answers; //Alternativas
+    [SerializeField] public GameObject answers; //Alternativas
     
     void Start()
     {
@@ -20,7 +21,7 @@ public class QuestionManager : MonoBehaviour
         ShowQuestion(currentQuestionID);
     }
 
-    public void Continue() //Escuta o botão continuar
+    public void Continue() //Escuta o botão Continuar
     {
         //Checar o número limite de questões
         if (currentQuestionID < this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
@@ -28,15 +29,31 @@ public class QuestionManager : MonoBehaviour
             currentQuestionID++;
             ShowQuestion(currentQuestionID);
         }
+        else if (currentQuestionID >= this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
+        {
+            SceneManager.LoadScene("Scenes/Tela_Menu");
+            UserResponseManager.SaveUserResponse(GetComponent<AnswerManager>().newUser);
+        }
+    }
+
+    public void Back() //Escuta o botão Voltar
+    {
+        if (currentQuestionID > 6)
+        {
+            currentQuestionID--;
+            ShowQuestion(currentQuestionID);
+        }
     }
     
     void ShowQuestion(int ID) //Muda o texto do conteúdo da UI
     {
-        //Get questions
+        //Pega as perguntas
         Questionnaire questionnaire = this.GetComponent<GameManager>().questionnaire;
         Question question = questionnaire.questions[ID];
 
-        questionTitle.text = baseQuestionTitle + question.questionID.ToString(); //Define o texto do título com o número
+        int questionID = question.questionID - 5;
+        
+        questionTitle.text = baseQuestionTitle + questionID.ToString(); //Define o texto do título com o número
         questionText.text = question.questionText; //Define texto do enunciado
 
         foreach (Transform answer in answers.transform) //Pega todas as alternativas

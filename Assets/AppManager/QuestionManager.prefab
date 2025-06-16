@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 385085517208753}
   - component: {fileID: 1288250278451278876}
+  - component: {fileID: 1015722509004080347}
+  - component: {fileID: 2071536838927894104}
   m_Layer: 0
   m_Name: QuestionManager
   m_TagString: Untagged
@@ -44,10 +46,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fe690edeae53ef649491f3fc32a7af0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentQuestionID: 0
   questionTitle: {fileID: 0}
   questionText: {fileID: 0}
-  answer0: {fileID: 0}
-  answer1: {fileID: 0}
-  answer2: {fileID: 0}
-  answer3: {fileID: 0}
-  answer4: {fileID: 0}
+  answers: {fileID: 0}
+--- !u!114 &1015722509004080347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2285401588469701076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed7a710cf8acca4ba366f52cac753df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questionnaire:
+    questions: []
+--- !u!114 &2071536838927894104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2285401588469701076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660e61ca314358c248e9db256d61008c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userResponse:
+    userID: 
+    answers: []
