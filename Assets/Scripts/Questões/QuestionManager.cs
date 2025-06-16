@@ -1,0 +1,51 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class QuestionManager : MonoBehaviour
+{
+    int currentQuestionID;
+    string baseQuestionTitle = "PERGUNTA #";
+    
+    [SerializeField] TextMeshProUGUI questionTitle; //Título
+    [SerializeField] TextMeshProUGUI questionText; //Enunciado
+    [SerializeField] private GameObject answers; //Alternativas
+    
+    void Start()
+    {
+        currentQuestionID = 6; //Começa no 6, para pular placeholders
+        ShowQuestion(currentQuestionID);
+    }
+
+    public void Continue() //Escuta o botão continuar
+    {
+        //Checar o número limite de questões
+        if (currentQuestionID < this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
+        {
+            currentQuestionID++;
+            ShowQuestion(currentQuestionID);
+        }
+    }
+    
+    void ShowQuestion(int ID) //Muda o texto do conteúdo da UI
+    {
+        //Get questions
+        Questionnaire questionnaire = this.GetComponent<GameManager>().questionnaire;
+        Question question = questionnaire.questions[ID];
+
+        questionTitle.text = baseQuestionTitle + question.questionID.ToString(); //Define o texto do título com o número
+        questionText.text = question.questionText; //Define texto do enunciado
+
+        foreach (Transform answer in answers.transform) //Pega todas as alternativas
+        {
+            //Texto de cada alternativa
+            answer.GetChild(1).GetComponent<TextMeshProUGUI>().text = question.options[answer.transform.GetSiblingIndex()];
+            
+            //Ao continuar, desativa os Toggles
+            answer.GetComponent<Toggle>().isOn = false;
+        }
+    }
+}
