@@ -16,7 +16,7 @@ public class AnswerManager : MonoBehaviour
     void Start()
     {
         respostas = new UserResponseList();
-        newUser = new UserResponse("user001");
+        newUser = new UserResponse(TermoAceitacao.cpfMenorStatic);
         respostas.userResponses.Add(newUser);
     }
 
