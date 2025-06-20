@@ -10,6 +10,8 @@ public class AnswerManager : MonoBehaviour
     [SerializeField] private UserResponseList respostas;
     public UserResponse newUser;
     int questionID;
+    
+    public int selectedAnswers;
 
     void Start()
     {
@@ -32,9 +34,11 @@ public class AnswerManager : MonoBehaviour
         {
             case true: 
                 newUser.answers.Add(answer);
+                selectedAnswers ++;
                 break;
             case false:
                 newUser.answers.RemoveAll(q => q.response == responseText && q.questionID == questionID);
+                selectedAnswers --;
                 break;
         }
     }

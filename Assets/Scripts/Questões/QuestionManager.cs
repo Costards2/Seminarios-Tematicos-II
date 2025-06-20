@@ -23,11 +23,14 @@ public class QuestionManager : MonoBehaviour
 
     public void Continue() //Escuta o botão Continuar
     {
+        if (GetComponent<AnswerManager>().selectedAnswers == 0) return;// Verificar se há respostas selecionadas
+        
         //Checar o número limite de questões
         if (currentQuestionID < this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
         {
             currentQuestionID++;
             ShowQuestion(currentQuestionID);
+            GetComponent<AnswerManager>().selectedAnswers = 0;
         }
         else if (currentQuestionID >= this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
         {
