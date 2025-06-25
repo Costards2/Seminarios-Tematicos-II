@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
         questionnaire = JsonManager.LoadQuestionnaireData();
 
         // Cria um questionário com perguntas de exemplo se não houver perguntas carregadas
-        if (questionnaire.questions == null || questionnaire.questions.Count == 0)
+        if (questionnaire.questions == null)
         {
             AddSampleQuestions();
             SaveQuestionnaireData();
@@ -22,8 +22,6 @@ public class GameManager : MonoBehaviour
         Questionnaire all = DisplayQuestions();
         Questionnaire single = DisplayQuestions(5);
         Questionnaire range = DisplayQuestions(4, 7);
-
-        SaveSampleUserAnswers();
     }
 
     void AddSampleQuestions()
