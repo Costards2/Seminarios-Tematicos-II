@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &36217644
 RectTransform:
   m_ObjectHideFlags: 0
@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: CONTINUAR
+  m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -292,7 +292,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 15, y: 15}
+  m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123619056
 MonoBehaviour:
@@ -332,7 +332,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123619054}
   m_CullTransparentMesh: 1
---- !u!1 &311728227
+--- !u!1 &230743792
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -340,73 +340,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 311728228}
-  - component: {fileID: 311728230}
-  - component: {fileID: 311728229}
+  - component: {fileID: 230743793}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: Sliding Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &311728228
+--- !u!224 &230743793
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311728227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 230743792}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1338792956}
+  m_Children:
+  - {fileID: 1477239594}
+  m_Father: {fileID: 1052792391}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &311728229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311728227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &311728230
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311728227}
-  m_CullTransparentMesh: 1
 --- !u!1 &480762565
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -615,132 +576,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 512500177}
   m_CullTransparentMesh: 1
---- !u!1 &586390164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 586390165}
-  - component: {fileID: 586390168}
-  - component: {fileID: 586390167}
-  - component: {fileID: 586390166}
-  m_Layer: 5
-  m_Name: Scrollbar Vertical
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &586390165
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586390164}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1098910078}
-  m_Father: {fileID: 2072878792}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 1}
-  m_SizeDelta: {x: 56.5, y: 0}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &586390166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586390164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1101498765}
-  m_HandleRect: {fileID: 1101498764}
-  m_Direction: 2
-  m_Value: 1
-  m_Size: 0.08817438
-  m_NumberOfSteps: 0
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &586390167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586390164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &586390168
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586390164}
-  m_CullTransparentMesh: 1
 --- !u!1 &714081355
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,96 +644,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &973583131
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 973583132}
-  - component: {fileID: 973583135}
-  - component: {fileID: 973583134}
-  - component: {fileID: 973583133}
-  m_Layer: 5
-  m_Name: Viewport
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &973583132
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973583131}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1192333732}
-  m_Father: {fileID: 2072878792}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &973583133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973583131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ShowMaskGraphic: 0
---- !u!114 &973583134
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973583131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &973583135
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973583131}
-  m_CullTransparentMesh: 1
 --- !u!1 &1009274877
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,14 +654,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1009274878}
   - component: {fileID: 1009274880}
-  - component: {fileID: 1009274881}
+  - component: {fileID: 1009274879}
   m_Layer: 5
   m_Name: Label
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1009274878
 RectTransform:
   m_ObjectHideFlags: 0
@@ -936,15 +681,7 @@ RectTransform:
   m_AnchoredPosition: {x: 9, y: -0.5}
   m_SizeDelta: {x: -28, y: -3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1009274880
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009274877}
-  m_CullTransparentMesh: 1
---- !u!114 &1009274881
+--- !u!114 &1009274879
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -953,86 +690,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 1009274877}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LI E CONCORDO
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 14
-  m_fontSizeBase: 13
-  m_fontWeight: 400
-  m_enableAutoSizing: 1
-  m_fontSizeMin: 10
-  m_fontSizeMax: 14
-  m_fontStyle: 0
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Toggle
+--- !u!222 &1009274880
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009274877}
+  m_CullTransparentMesh: 1
 --- !u!1 &1021289853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +760,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1098910077
+--- !u!1 &1052792390
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1078,78 +768,93 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1098910078}
+  - component: {fileID: 1052792391}
+  - component: {fileID: 1052792394}
+  - component: {fileID: 1052792393}
+  - component: {fileID: 1052792392}
   m_Layer: 5
-  m_Name: Sliding Area
+  m_Name: Scrollbar Vertical
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1098910078
+--- !u!224 &1052792391
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098910077}
+  m_GameObject: {fileID: 1052792390}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1101498764}
-  m_Father: {fileID: 586390165}
+  - {fileID: 230743793}
+  m_Father: {fileID: 1582781173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1101498763
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1101498764}
-  - component: {fileID: 1101498766}
-  - component: {fileID: 1101498765}
-  m_Layer: 5
-  m_Name: Handle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1101498764
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101498763}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1098910078}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 20, y: 20}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1101498765
+  m_SizeDelta: {x: 62.6, y: 0}
+  m_Pivot: {x: 1, y: 1}
+--- !u!114 &1052792392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101498763}
+  m_GameObject: {fileID: 1052792390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4db7a114972834c8e4117be1d82ba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1477239595}
+  m_HandleRect: {fileID: 1477239594}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.24245362
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1052792393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052792390}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -1163,7 +868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1173,13 +878,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &1101498766
+--- !u!222 &1052792394
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1101498763}
+  m_GameObject: {fileID: 1052792390}
   m_CullTransparentMesh: 1
 --- !u!1 &1164021541
 GameObject:
@@ -1256,280 +961,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1164021541}
   m_CullTransparentMesh: 1
---- !u!1 &1192333731
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1192333732}
-  - component: {fileID: 1192333735}
-  - component: {fileID: 1192333734}
-  - component: {fileID: 1192333733}
-  m_Layer: 5
-  m_Name: Content
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1192333732
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192333731}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 973583132}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1192333733
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192333731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalFit: 0
-  m_VerticalFit: 2
---- !u!114 &1192333734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192333731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: "TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\n\nEsta pesquisa seguir\xE1
-    os Crit\xE9rios da \xC9tica em Pesquisa com Seres Humanos conforme Resolu\xE7\xE3o
-    n 466/12 do Conselho Nacional de Sa\xFAde.\n\n\nII - DADOS SOBRE A PESQUISA CIENT\xCDFICA:\nT\xCDTULO
-    DO PROTOCOLO DE PESQUISA - \"Pr\xE1ticas de Prote\xE7\xE3o de Dados e Privacidade
-    de adolescentes nos Jogos Digitais: Um Estudo das intera\xE7\xF5es deste grupo
-    geracional em Salvador \"\n  PESQUISADORES(AS) RESPONS\xC1VEIS - Lynn Alves Mariona
-    Gran\xE9.\nCargo/fun\xE7\xE3o: Docentes da Universidade Federal da Bahia e da
-    Universidade de Barcelona\n\nIII - EXPLICA\xC7\xD5ES DO PESQUISADOR AO PARTICIPANTE
-    SOBRE A PESQUISA:\n\nCaro(a) senhor(a) seu(sua) filho(a) est\xE1 sendo convidado(a)
-    para participar da pesquisa - \"Pr\xE1ticas de Prote\xE7\xE3o de Dados e Privacidade
-    de Crian\xE7as nos Jogos Digitais: Um Estudo das intera\xE7\xF5es deste grupo
-    geracional em Salvador\" sob a responsabilidade das pesquisadoras Lynn Alves
-    e Mariona Gran\xE9, docentes e pesquisadoras da Universidade Federal da Bahia
-    e da Universidade de Barcelona.\nA pesquisa que tem como objetivo investigar
-    as a\xE7\xF5es que v\xEAm sendo desenvolvidas por pais e adolescentes soteropolitanos,
-    no sentido de mediar a intera\xE7\xE3o segura, isto \xE9, adotando pr\xE1ticas
-    para proteger os dados pessoais e sens\xEDveis nos ambientes dos jogos digitais.
-    Este projeto visa contribuir subsidiando pol\xEDticas e recomenda\xE7\xF5es para
-    pais, professores e crian\xE7as/adolescentes para prote\xE7\xE3o e privacidade
-    dos dados pessoais e sens\xEDveis nas plataformas de jogos digitais.\nA realiza\xE7\xE3o
-    desta pesquisa poder\xE1 trazer benef\xEDcios importantes para a forma\xE7\xE3o
-    da consci\xEAncia cr\xEDtica de seu(sua) filho(a) sobre as quest\xF5es relacionadas
-    com privacidade e prote\xE7\xE3o de dados nos ambientes virtuais, como os jogos
-    digitais. Caso o(a) senhor(a) aceite autorizar a participa\xE7\xE3o de seu(sua)
-    filho(a) ele(a) ser\xE1 convidado a participar de um question\xE1rio online para
-    responder perguntas sobre a intera\xE7\xE3o com os jogos e quais os cuidados
-    que t\xEAm para proteger os seus dados pessoais. A coleta de informa\xE7\xF5es
-    n\xE3o causar\xE1 nenhum dano ou constrangimento ao seu(sua) filho(a). A participa\xE7\xE3o
-    \xE9 volunt\xE1ria e n\xE3o haver\xE1 nenhum gasto ou remunera\xE7\xE3o resultante
-    dela. Garantimos que a identidade ser\xE1 tratada com sigilo e, portanto, seu(sua)
-    filho(a) n\xE3o ser\xE1 identificado(a). Esta pesquisa respeita o que determina
-    os documentos legais da Espanha e do Brasil que protegem a crian\xE7a e o adolescente,
-    preservando a imagem de seu filho, bem como, o artigo 14 da Lei Geral de Prote\xE7\xE3o
-    de Dados do Brasil. Caso queira o(a) senhor(a) poder\xE1, a qualquer momento,
-    desistir de autorizar a participa\xE7\xE3o e retirar sua autoriza\xE7\xE3o. Sua
-    recusa n\xE3o trar\xE1 nenhum preju\xEDzo em sua rela\xE7\xE3o e a de seu(sua)
-    filho(a) com os pesquisadores ou com a institui\xE7\xE3o. Quaisquer d\xFAvidas
-    que o(a) senhor(a) apresentar, ser\xE3o esclarecidas pelos pesquisadores e o
-    Sr.(a) caso queira poder\xE1 entrar em contato tamb\xE9m com o Comit\xEA de \xC9tica
-    em Pesquisa da Escola de Enfermagem da Universidade Federal da Bahia. O(a) senhor(a)
-    receber\xE1 uma c\xF3pia deste termo onde consta o contato dos pesquisadores,
-    nos quais poder\xE1 tirar suas d\xFAvidas sobre o projeto e a participa\xE7\xE3o,
-    agora ou a qualquer momento. \n\nV. INFORMA\xC7\xD5ES DE NOMES, ENDERE\xC7OS
-    E TELEFONES DOS RESPONS\xC1VEIS PELO ACOMPANHAMENTO DA PESQUISA, PARA CONTATO
-    EM CASO DE D\xDAVIDAS\n\nLynn Rosalina Gama Alves\nEndere\xE7o: Rua Bar\xE3o
-    de Jeremoabo - Ondina, Salvador - BA Telefone: (+5571)99979-4618\nE-mail: lynnalves@gmail.com\n\nMariona
-    Gran\xE9\nEndere\xE7o: Campus Mundet\_ Edifici Llevant 005 Pg. Vall d'Hebron
-    171\n08035 Barcelona\nE-mail: mgrane@ub.edu\nComit\xEA de \xC9tica em Pesquisa
-    da Escola de Enfermagem da Universidade Federal da Bahia\nEndere\xE7o: Rua Augusto
-    Viana, s/n, 4\xBA andar, sala 432-437, Canela, Salvador - Bahia. \nCEP: 71 3283
-    7615    E-mail: cepee.ufba@ufba.br  Telefone: (71)3283-7615\n\nComiss\xE3o Nacional
-    de \xC9tica em Pesquisa \u2013 CONEP SEPN 510 NORTE, BLOCO A 1\xBA SUBSOLO, Edif\xEDcio
-    Ex-INAN - Unidade II - Minist\xE9rio da Sa\xFAde CEP: 70750-521 \u2013 Bras\xEDlia
-    -DF\n\nV. CONSENTIMENTO P\xD3S-ESCLARECIDO.\nDeclaro que, ap\xF3s ter sido devidamente
-    esclarecido(a) pelos(as) pesquisadores(as) sobre os objetivos, benef\xEDcios
-    e riscos da pesquisa \"Pr\xE1ticas de Prote\xE7\xE3o de Dados e Privacidade de
-    adolescentes nos Jogos Digitais: Um Estudo das intera\xE7\xF5es deste grupo geracional
-    em Salvador\", e ter entendido o que me foi explicado, concordo em autorizar
-    a participa\xE7\xE3o de meu filho(a) de livre e espont\xE2nea vontade, como volunt\xE1rio(a).
-    Consinto tamb\xE9m que os resultados obtidos sejam apresentados e publicados
-    em eventos e artigos cient\xEDficos desde que sua identifica\xE7\xE3o n\xE3o
-    seja realizada. Assinarei este documento em duas vias, sendo uma destinada ao
-    pesquisador e outra a mim. TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\n\nEsta
-    pesquisa seguir\xE1 os Crit\xE9rios da \xC9tica em Pesquisa com Seres Humanos
-    conforme Resolu\xE7\xE3o n 466/12 do Conselho Nacional de Sa\xFAde.\n\n\nII -
-    DADOS SOBRE A PESQUISA CIENT\xCDFICA:\nT\xCDTULO DO PROTOCOLO DE PESQUISA - \"Pr\xE1ticas
-    de Prote\xE7\xE3o de Dados e Privacidade de adolescentes nos Jogos Digitais:
-    Um Estudo das intera\xE7\xF5es deste grupo geracional em Salvador \"\n  PESQUISADORES(AS)
-    RESPONS\xC1VEIS - Lynn Alves Mariona Gran\xE9.\nCargo/fun\xE7\xE3o: Docentes
-    da Universidade Federal da Bahia e da Universidade de Barcelona\n\nIII - EXPLICA\xC7\xD5ES
-    DO PESQUISADOR AO PARTICIPANTE SOBRE A PESQUISA:\n\nCaro(a) senhor(a) seu(sua)
-    filho(a) est\xE1 sendo convidado(a) para participar da pesquisa - \"Pr\xE1ticas
-    de Prote\xE7\xE3o de Dados e Privacidade de Crian\xE7as nos Jogos Digitais: Um
-    Estudo das intera\xE7\xF5es deste grupo geracional em Salvador\" sob a responsabilidade
-    das pesquisadoras Lynn Alves e Mariona Gran\xE9, docentes e pesquisadoras da
-    Universidade Federal da Bahia e da Universidade de Barcelona.\nA pesquisa que
-    tem como objetivo investigar as a\xE7\xF5es que v\xEAm sendo desenvolvidas por
-    pais e adolescentes soteropolitanos, no sentido de mediar a intera\xE7\xE3o segura,
-    isto \xE9, adotando pr\xE1ticas para proteger os dados pessoais e sens\xEDveis
-    nos ambientes dos jogos digitais. Este projeto visa contribuir subsidiando pol\xEDticas
-    e recomenda\xE7\xF5es para pais, professores e crian\xE7as/adolescentes para
-    prote\xE7\xE3o e privacidade dos dados pessoais e sens\xEDveis nas plataformas
-    de jogos digitais.\nA realiza\xE7\xE3o desta pesquisa poder\xE1 trazer benef\xEDcios
-    importantes para a forma\xE7\xE3o da consci\xEAncia cr\xEDtica de seu(sua) filho(a)
-    sobre as quest\xF5es relacionadas com privacidade e prote\xE7\xE3o de dados nos
-    ambientes virtuais, como os jogos digitais. Caso o(a) senhor(a) aceite autorizar
-    a participa\xE7\xE3o de seu(sua) filho(a) ele(a) ser\xE1 convidado a participar
-    de um question\xE1rio online para responder perguntas sobre a intera\xE7\xE3o
-    com os jogos e quais os cuidados que t\xEAm para proteger os seus dados pessoais.
-    A coleta de informa\xE7\xF5es n\xE3o causar\xE1 nenhum dano ou constrangimento
-    ao seu(sua) filho(a). A participa\xE7\xE3o \xE9 volunt\xE1ria e n\xE3o haver\xE1
-    nenhum gasto ou remunera\xE7\xE3o resultante dela. Garantimos que a identidade
-    ser\xE1 tratada com sigilo e, portanto, seu(sua) filho(a) n\xE3o ser\xE1 identificado(a).
-    Esta pesquisa respeita o que determina os documentos legais da Espanha e do Brasil
-    que protegem a crian\xE7a e o adolescente, preservando a imagem de seu filho,
-    bem como, o artigo 14 da Lei Geral de Prote\xE7\xE3o de Dados do Brasil. Caso
-    queira o(a) senhor(a) poder\xE1, a qualquer momento, desistir de autorizar a
-    participa\xE7\xE3o e retirar sua autoriza\xE7\xE3o. Sua recusa n\xE3o trar\xE1
-    nenhum preju\xEDzo em sua rela\xE7\xE3o e a de seu(sua) filho(a) com os pesquisadores
-    ou com a institui\xE7\xE3o. Quaisquer d\xFAvidas que o(a) senhor(a) apresentar,
-    ser\xE3o esclarecidas pelos pesquisadores e o Sr.(a) caso queira poder\xE1 entrar
-    em contato tamb\xE9m com o Comit\xEA de \xC9tica em Pesquisa da Escola de Enfermagem
-    da Universidade Federal da Bahia. O(a) senhor(a) receber\xE1 uma c\xF3pia deste
-    termo onde consta o contato dos pesquisadores, nos quais poder\xE1 tirar suas
-    d\xFAvidas sobre o projeto e a participa\xE7\xE3o, agora ou a qualquer momento.
-    \n\nV. INFORMA\xC7\xD5ES DE NOMES, ENDERE\xC7OS E TELEFONES DOS RESPONS\xC1VEIS
-    PELO ACOMPANHAMENTO DA PESQUISA, PARA CONTATO EM CASO DE D\xDAVIDAS\n\nLynn Rosalina
-    Gama Alves\nEndere\xE7o: Rua Bar\xE3o de Jeremoabo - Ondina, Salvador - BA Telefone:
-    (+5571)99979-4618\nE-mail: lynnalves@gmail.com\n\nMariona Gran\xE9\nEndere\xE7o:
-    Campus Mundet\_ Edifici Llevant 005 Pg. Vall d'Hebron 171\n08035 Barcelona\nE-mail:
-    mgrane@ub.edu\nComit\xEA de \xC9tica em Pesquisa da Escola de Enfermagem da Universidade
-    Federal da Bahia\nEndere\xE7o: Rua Augusto Viana, s/n, 4\xBA andar, sala 432-437,
-    Canela, Salvador - Bahia. \nCEP: 71 3283 7615    E-mail: cepee.ufba@ufba.br 
-    Telefone: (71)3283-7615\n\nComiss\xE3o Nacional de \xC9tica em Pesquisa \u2013
-    CONEP SEPN 510 NORTE, BLOCO A 1\xBA SUBSOLO, Edif\xEDcio Ex-INAN - Unidade II
-    - Minist\xE9rio da Sa\xFAde CEP: 70750-521 \u2013 Bras\xEDlia -DF\n\nV. CONSENTIMENTO
-    P\xD3S-ESCLARECIDO.\nDeclaro que, ap\xF3s ter sido devidamente esclarecido(a)
-    pelos(as) pesquisadores(as) sobre os objetivos, benef\xEDcios e riscos da pesquisa
-    \"Pr\xE1ticas de Prote\xE7\xE3o de Dados e Privacidade de adolescentes nos Jogos
-    Digitais: Um Estudo das intera\xE7\xF5es deste grupo geracional em Salvador\",
-    e ter entendido o que me foi explicado, concordo em autorizar a participa\xE7\xE3o
-    de meu filho(a) de livre e espont\xE2nea vontade, como volunt\xE1rio(a). Consinto
-    tamb\xE9m que os resultados obtidos sejam apresentados e publicados em eventos
-    e artigos cient\xEDficos desde que sua identifica\xE7\xE3o n\xE3o seja realizada.
-    Assinarei este documento em duas vias, sendo uma destinada ao pesquisador e outra
-    a mim. "
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 8
-  m_VerticalAlignment: 256
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 35, y: 35, z: 35, w: 35}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1192333735
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192333731}
-  m_CullTransparentMesh: 1
 --- !u!1 &1338792952
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,12 +1009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 1
+  m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1200, y: 1920}
+  m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 1
+  m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1624,14 +1055,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 311728228}
   - {fileID: 2118403048}
   - {fileID: 512500178}
   - {fileID: 1871368670}
   - {fileID: 1021289854}
   - {fileID: 2016545431}
-  - {fileID: 2072878792}
-  - {fileID: 1581580482}
+  - {fileID: 1582781173}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1699,7 +1128,7 @@ RectTransform:
   m_AnchoredPosition: {x: -0.21254207, y: -2.9452617}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1581580481
+--- !u!1 &1441472999
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1707,45 +1136,60 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1581580482}
-  - component: {fileID: 1581580484}
-  - component: {fileID: 1581580483}
+  - component: {fileID: 1441473000}
+  - component: {fileID: 1441473003}
+  - component: {fileID: 1441473002}
+  - component: {fileID: 1441473001}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Viewport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1581580482
+--- !u!224 &1441473000
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581580481}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 1441472999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1338792956}
+  m_Children:
+  - {fileID: 1782682158}
+  m_Father: {fileID: 1582781173}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 744.9}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1581580483
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1441473001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581580481}
+  m_GameObject: {fileID: 1441472999}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Script: {fileID: 11500000, guid: 31a19414c41e5ae4aae2af33fee712f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 0
+--- !u!114 &1441473002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441472999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
@@ -1756,82 +1200,206 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "TERMOS\nRespons\xE1vel"
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 1
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 4096
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 0
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &1581580484
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1441473003
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1581580481}
+  m_GameObject: {fileID: 1441472999}
+  m_CullTransparentMesh: 1
+--- !u!1 &1477239593
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1477239594}
+  - component: {fileID: 1477239596}
+  - component: {fileID: 1477239595}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1477239594
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477239593}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 230743793}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1477239595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477239593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1477239596
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477239593}
+  m_CullTransparentMesh: 1
+--- !u!1 &1582781172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582781173}
+  - component: {fileID: 1582781176}
+  - component: {fileID: 1582781175}
+  - component: {fileID: 1582781174}
+  m_Layer: 5
+  m_Name: Scroll View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1582781173
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582781172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1441473000}
+  - {fileID: 1052792391}
+  m_Father: {fileID: 1338792956}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 6.4, y: 44.4}
+  m_SizeDelta: {x: 1142.9, y: 1140.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1582781174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582781172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1782682158}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 1441473000}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1052792392}
+  m_HorizontalScrollbarVisibility: 2
+  m_VerticalScrollbarVisibility: 2
+  m_HorizontalScrollbarSpacing: -3
+  m_VerticalScrollbarSpacing: -3
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1582781175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582781172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1582781176
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582781172}
   m_CullTransparentMesh: 1
 --- !u!1 &1601490294
 GameObject:
@@ -1941,7 +1509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1965,6 +1533,218 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601490294}
+  m_CullTransparentMesh: 1
+--- !u!1 &1782682157
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1782682158}
+  - component: {fileID: 1782682161}
+  - component: {fileID: 1782682160}
+  - component: {fileID: 1782682159}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1782682158
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682157}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1441473000}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 1}
+--- !u!114 &1782682159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 2
+--- !u!114 &1782682160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO\r\n\r\nEsta pesquisa seguir\xE1
+    os Crit\xE9rios da \xC9tica em Pesquisa com Seres Humanos conforme Resolu\xE7\xE3o
+    n 466/12 do Conselho Nacional de Sa\xFAde.\r\n\n\nII - DADOS SOBRE A PESQUISA
+    CIENT\xCDFICA:\r\nT\xCDTULO DO PROTOCOLO DE PESQUISA - \"Pr\xE1ticas de Prote\xE7\xE3o
+    de Dados e Privacidade de adolescentes nos Jogos Digitais: Um Estudo das intera\xE7\xF5es
+    deste grupo geracional em Salvador \"\r\n  PESQUISADORES(AS) RESPONS\xC1VEIS
+    - Lynn Alves Mariona Gran\xE9.\r\nCargo/fun\xE7\xE3o: Docentes da Universidade
+    Federal da Bahia e da Universidade de Barcelona\r\n\r\nIII - EXPLICA\xC7\xD5ES
+    DO PESQUISADOR AO PARTICIPANTE SOBRE A PESQUISA:\r\n\r\nCaro(a) senhor(a) seu(sua)
+    filho(a) est\xE1 sendo convidado(a) para participar da pesquisa - \"Pr\xE1ticas
+    de Prote\xE7\xE3o de Dados e Privacidade de Crian\xE7as nos Jogos Digitais: Um
+    Estudo das intera\xE7\xF5es deste grupo geracional em Salvador\" sob a responsabilidade
+    das pesquisadoras Lynn Alves e Mariona Gran\xE9, docentes e pesquisadoras da
+    Universidade Federal da Bahia e da Universidade de Barcelona.\r\nA pesquisa que
+    tem como objetivo investigar as a\xE7\xF5es que v\xEAm sendo desenvolvidas por
+    pais e adolescentes soteropolitanos, no sentido de mediar a intera\xE7\xE3o segura,
+    isto \xE9, adotando pr\xE1ticas para proteger os dados pessoais e sens\xEDveis
+    nos ambientes dos jogos digitais. Este projeto visa contribuir subsidiando pol\xEDticas
+    e recomenda\xE7\xF5es para pais, professores e crian\xE7as/adolescentes para
+    prote\xE7\xE3o e privacidade dos dados pessoais e sens\xEDveis nas plataformas
+    de jogos digitais.\r\nA realiza\xE7\xE3o desta pesquisa poder\xE1 trazer benef\xEDcios
+    importantes para a forma\xE7\xE3o da consci\xEAncia cr\xEDtica de seu(sua) filho(a)
+    sobre as quest\xF5es relacionadas com privacidade e prote\xE7\xE3o de dados nos
+    ambientes virtuais, como os jogos digitais. Caso o(a) senhor(a) aceite autorizar
+    a participa\xE7\xE3o de seu(sua) filho(a) ele(a) ser\xE1 convidado a participar
+    de um question\xE1rio online para responder perguntas sobre a intera\xE7\xE3o
+    com os jogos e quais os cuidados que t\xEAm para proteger os seus dados pessoais.
+    A coleta de informa\xE7\xF5es n\xE3o causar\xE1 nenhum dano ou constrangimento
+    ao seu(sua) filho(a). A participa\xE7\xE3o \xE9 volunt\xE1ria e n\xE3o haver\xE1
+    nenhum gasto ou remunera\xE7\xE3o resultante dela. Garantimos que a identidade
+    ser\xE1 tratada com sigilo e, portanto, seu(sua) filho(a) n\xE3o ser\xE1 identificado(a).
+    Esta pesquisa respeita o que determina os documentos legais da Espanha e do Brasil
+    que protegem a crian\xE7a e o adolescente, preservando a imagem de seu filho,
+    bem como, o artigo 14 da Lei Geral de Prote\xE7\xE3o de Dados do Brasil. Caso
+    queira o(a) senhor(a) poder\xE1, a qualquer momento, desistir de autorizar a
+    participa\xE7\xE3o e retirar sua autoriza\xE7\xE3o. Sua recusa n\xE3o trar\xE1
+    nenhum preju\xEDzo em sua rela\xE7\xE3o e a de seu(sua) filho(a) com os pesquisadores
+    ou com a institui\xE7\xE3o. Quaisquer d\xFAvidas que o(a) senhor(a) apresentar,
+    ser\xE3o esclarecidas pelos pesquisadores e o Sr.(a) caso queira poder\xE1 entrar
+    em contato tamb\xE9m com o Comit\xEA de \xC9tica em Pesquisa da Escola de Enfermagem
+    da Universidade Federal da Bahia. O(a) senhor(a) receber\xE1 uma c\xF3pia deste
+    termo onde consta o contato dos pesquisadores, nos quais poder\xE1 tirar suas
+    d\xFAvidas sobre o projeto e a participa\xE7\xE3o, agora ou a qualquer momento.
+    \r\n\r\nV. INFORMA\xC7\xD5ES DE NOMES, ENDERE\xC7OS E TELEFONES DOS RESPONS\xC1VEIS
+    PELO ACOMPANHAMENTO DA PESQUISA, PARA CONTATO EM CASO DE D\xDAVIDAS\r\n\r\nLynn
+    Rosalina Gama Alves\r\nEndere\xE7o: Rua Bar\xE3o de Jeremoabo - Ondina, Salvador
+    - BA Telefone: (+5571)99979-4618\r\nE-mail: lynnalves@gmail.com\r\n\r\nMariona
+    Gran\xE9\r\nEndere\xE7o: Campus Mundet\_ Edifici Llevant 005 Pg. Vall d'Hebron
+    171\n08035 Barcelona\r\nE-mail: mgrane@ub.edu\r\nComit\xEA de \xC9tica em Pesquisa
+    da Escola de Enfermagem da Universidade Federal da Bahia\r\nEndere\xE7o: Rua
+    Augusto Viana, s/n, 4\xBA andar, sala 432-437, Canela, Salvador - Bahia. \r\nCEP:
+    71 3283 7615    E-mail: cepee.ufba@ufba.br  Telefone: (71)3283-7615\r\n\r\nComiss\xE3o
+    Nacional de \xC9tica em Pesquisa \u2013 CONEP SEPN 510 NORTE, BLOCO A 1\xBA SUBSOLO,
+    Edif\xEDcio Ex-INAN - Unidade II - Minist\xE9rio da Sa\xFAde CEP: 70750-521 \u2013
+    Bras\xEDlia -DF\r\n\r\nV. CONSENTIMENTO P\xD3S-ESCLARECIDO.\r\nDeclaro que, ap\xF3s
+    ter sido devidamente esclarecido(a) pelos(as) pesquisadores(as) sobre os objetivos,
+    benef\xEDcios e riscos da pesquisa \"Pr\xE1ticas de Prote\xE7\xE3o de Dados e
+    Privacidade de adolescentes nos Jogos Digitais: Um Estudo das intera\xE7\xF5es
+    deste grupo geracional em Salvador\", e ter entendido o que me foi explicado,
+    concordo em autorizar a participa\xE7\xE3o de meu filho(a) de livre e espont\xE2nea
+    vontade, como volunt\xE1rio(a). Consinto tamb\xE9m que os resultados obtidos
+    sejam apresentados e publicados em eventos e artigos cient\xEDficos desde que
+    sua identifica\xE7\xE3o n\xE3o seja realizada. Assinarei este documento em duas
+    vias, sendo uma destinada ao pesquisador e outra a mim. "
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 8
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 35, y: 35, z: 35, w: 35}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1782682161
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1782682157}
   m_CullTransparentMesh: 1
 --- !u!1 &1871368669
 GameObject:
@@ -2001,7 +1781,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -103.8, y: -572.1}
+  m_AnchoredPosition: {x: -221, y: -604}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871368671
@@ -2206,7 +1986,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1964170063
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2246,7 +2026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SAIR
+  m_text: Button
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2457,114 +2237,6 @@ RectTransform:
   m_AnchoredPosition: {x: -465, y: -695}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2072878791
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2072878792}
-  - component: {fileID: 2072878795}
-  - component: {fileID: 2072878794}
-  - component: {fileID: 2072878793}
-  m_Layer: 5
-  m_Name: Scroll View
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2072878792
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072878791}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 973583132}
-  - {fileID: 586390165}
-  m_Father: {fileID: 1338792956}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 45.2}
-  m_SizeDelta: {x: 890, y: 1050}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2072878793
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072878791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Content: {fileID: 1192333732}
-  m_Horizontal: 0
-  m_Vertical: 1
-  m_MovementType: 1
-  m_Elasticity: 0.1
-  m_Inertia: 1
-  m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
-  m_Viewport: {fileID: 973583132}
-  m_HorizontalScrollbar: {fileID: 0}
-  m_VerticalScrollbar: {fileID: 586390166}
-  m_HorizontalScrollbarVisibility: 2
-  m_VerticalScrollbarVisibility: 2
-  m_HorizontalScrollbarSpacing: -3
-  m_VerticalScrollbarSpacing: -3
-  m_OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2072878794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072878791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2072878795
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2072878791}
-  m_CullTransparentMesh: 1
 --- !u!1001 &2111346065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2639,7 +2311,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2118403048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2654,10 +2326,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1338792956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2118403049
 MonoBehaviour:
