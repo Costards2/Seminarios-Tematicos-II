@@ -2577,10 +2577,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 491541054679296035, guid: ed07d00aaa47aab48b0053ad5be45290, type: 3}
-        m_TargetAssemblyTypeName: AppManager, Assembly-CSharp
-        m_MethodName: CenaParaLoad
-        m_Mode: 5
+      - m_Target: {fileID: 344314661}
+        m_TargetAssemblyTypeName: TermoAceitacao, Assembly-CSharp
+        m_MethodName: RegistroTermo
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

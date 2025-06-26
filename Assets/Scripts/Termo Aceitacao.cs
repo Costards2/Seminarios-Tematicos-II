@@ -43,7 +43,7 @@ public class TermoAceitacao : MonoBehaviour
     }
 
     [System.Serializable]
-    public class DetalhesUsuariosTermo  //informações do adulto e do menor que serão salvas no json do termo 
+    public class DetalhesUsuariosTermo  //informaï¿½ï¿½es do adulto e do menor que serï¿½o salvas no json do termo 
     {
         public string cpfAdulto;
         public string cpfMenor;
@@ -78,10 +78,10 @@ public class TermoAceitacao : MonoBehaviour
 
             if (sexoM.isOn)
             {
-                sexo = "M";
+                sexo = "Masculino";
             }else if (sexoF.isOn)
             {
-                sexo = "F";
+                sexo = "Feminino";
             }else if (sexoOutros.isOn)
             {
                 sexo = "Outros";
@@ -102,14 +102,14 @@ public class TermoAceitacao : MonoBehaviour
 
             FormDataCollection colecao;
 
-           // Se o arquivo já existe, carregue os dados já salvos
+           // Se o arquivo jï¿½ existe, carregue os dados jï¿½ salvos
             if (File.Exists(caminhoArquivo))
             {
                 string jsonAntigo = File.ReadAllText(caminhoArquivo);
                 if (!string.IsNullOrEmpty(jsonAntigo))
                 {
                    colecao = JsonUtility.FromJson<FormDataCollection>(jsonAntigo);
-                   // Caso a desserialização falhe, inicialize uma nova coleção
+                   // Caso a desserializaï¿½ï¿½o falhe, inicialize uma nova coleï¿½ï¿½o
                    if (colecao == null)
                         colecao = new FormDataCollection();
                }
@@ -123,14 +123,30 @@ public class TermoAceitacao : MonoBehaviour
                 colecao = new FormDataCollection();
             }
 
-            // Adiciona o novo registro à coleção
+            // Adiciona o novo registro ï¿½ coleï¿½ï¿½o
             colecao.usuarios.Add(novoDado);
         
-            // Converte a coleção para uma string JSON formatada (o 'true' para formatação legível)
+            // Converte a coleï¿½ï¿½o para uma string JSON formatada (o 'true' para formataï¿½ï¿½o legï¿½vel)
             string novoJson = JsonUtility.ToJson(colecao, true);
 
             // Salva o JSON no arquivo
             File.WriteAllText(caminhoArquivo, novoJson);
+
+            // Create a new UserResponse with the cpfMenor as userID
+            UserResponse newResponse = new UserResponse(cpfMenorStatic);
+
+            // Add answers with the respective question IDs and values
+            newResponse.answers.Add(new Answer(0, cpfAdultoStatic));  // cpfAdulto to question ID 0
+            newResponse.answers.Add(new Answer(1, cpfMenorStatic));   // cpfMenor to question ID 1
+            newResponse.answers.Add(new Answer(2, inputNome.text));   // nome to question ID 2
+            newResponse.answers.Add(new Answer(3, idade));            // idade to question ID 3
+            newResponse.answers.Add(new Answer(4, sexo));             // sexo to question ID 4
+            newResponse.answers.Add(new Answer(5, "Parda"));
+
+            // Save using the UserResponseManager static method
+            UserResponseManager.SaveUserResponse(newResponse);
+
+            Debug.Log("User responses saved to userResponses.json");
 
             ProximaTela();
         }

@@ -26,17 +26,13 @@
         },
         {
             "questionID": 4,
-            "questionText": "Identidade de gênero:",
-            "options": [
-                "Agênero", "Feminino", "Gênero-fluido", "Homem trans", "Intersexo",
-                "Masculino", "Mulher trans", "Não binário", "Prefiro não responder",
-                "Outro (identidade diferente das opções acima)"
-            ],
+            "questionText": "Sexo:",
+            "options": ["Feminino", "Masculino", "Outro"],
             "type": "multipleChoice"
         },
         {
             "questionID": 5,
-            "questionText": "Etnia (Opcional) (Sensível)",
+            "questionText": "Etnia",
             "options": ["Amarela", "Branca", "Indígena", "Parda", "Preta"],
             "type": "multipleChoice"
         },
