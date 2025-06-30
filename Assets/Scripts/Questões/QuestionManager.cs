@@ -14,12 +14,28 @@ public class QuestionManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI questionTitle; //Título
     [SerializeField] TextMeshProUGUI questionText; //Enunciado
     [SerializeField] public GameObject answers; //Alternativas
+
+    private float timer;
     
-    void Start()
+    private void FixedUpdate() // Não pode chamar o ShowQuestion muito cedo, se não ele não funciona
     {
-        currentQuestionID = 6; //Começa no 6, para pular placeholders
-        ShowQuestion(currentQuestionID);
+        if (timer < Time.fixedDeltaTime * 2f)
+        {
+            timer += Time.deltaTime;
+        }
+        else if (timer >= Time.fixedDeltaTime * 2f && timer < Time.fixedDeltaTime * 3)// Tem que ser depois de dois ciclos de fixedDeltaTime
+        {
+            timer = Time.fixedDeltaTime * 4;
+            currentQuestionID = 6; //Começa no 6, para pular placeholders
+            ShowQuestion(currentQuestionID);
+        }
     }
+
+    //void Awake()
+    //{
+        //currentQuestionID = 6; //Começa no 6, para pular placeholders
+        //ShowQuestion(currentQuestionID);
+    //}
 
     public void Continue() //Escuta o botão Continuar
     {
