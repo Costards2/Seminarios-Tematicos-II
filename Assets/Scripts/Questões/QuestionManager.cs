@@ -50,7 +50,7 @@ public class QuestionManager : MonoBehaviour
         }
         else if (currentQuestionID >= this.GetComponent<GameManager>().questionnaire.questions.Count - 1)
         {
-            SceneManager.LoadScene("Scenes/Tela_Menu");
+            SceneManager.LoadScene("Tela_Agradecimento");
             UserResponseManager.SaveUserResponse(GetComponent<AnswerManager>().newUser);
         }
     }

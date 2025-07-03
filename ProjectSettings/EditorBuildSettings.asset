@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tela_Inicial.unity
+    path: Assets/Scenes/Tela_Agradecimento.unity
     guid: 69e0b51bdf3fbcc4db485efd3dd6bef3
   - enabled: 1
     path: Assets/Scenes/Tela_Resultados.unity
@@ -29,5 +29,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tela_Questionario.unity
     guid: 512e244b0fe405a4da37cd7ed3dc11fd
+  - enabled: 1
+    path: Assets/Scenes/Tela_Inicial.unity
+    guid: 2dc03cdd9e85030458b57bec5c5b45f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
