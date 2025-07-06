@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tela_Agradecimento.unity
-    guid: 69e0b51bdf3fbcc4db485efd3dd6bef3
+    path: Assets/Scenes/Tela_Inicial.unity
+    guid: 2dc03cdd9e85030458b57bec5c5b45f9
   - enabled: 1
-    path: Assets/Scenes/Tela_Resultados.unity
-    guid: 375ded2612ef3184d86b9b9e2be3e2f9
+    path: Assets/Scenes/Tela_Menu.unity
+    guid: 67bd6c283994cc44aae8b9131643b242
   - enabled: 1
     path: Assets/Scenes/Tela_filter.unity
     guid: fa78ba1e03595c94088b1c338dd77f7b
   - enabled: 1
-    path: Assets/Scenes/Tela_Menu.unity
-    guid: 67bd6c283994cc44aae8b9131643b242
+    path: Assets/Scenes/Tela_Resultados.unity
+    guid: 375ded2612ef3184d86b9b9e2be3e2f9
   - enabled: 1
     path: Assets/Scenes/Tela_Termos_Adulto.unity
     guid: 325151a145e036572aa08e2210f757ec
@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Tela_Questionario.unity
     guid: 512e244b0fe405a4da37cd7ed3dc11fd
   - enabled: 1
-    path: Assets/Scenes/Tela_Inicial.unity
-    guid: 2dc03cdd9e85030458b57bec5c5b45f9
+    path: Assets/Scenes/Tela_Agradecimento.unity
+    guid: 69e0b51bdf3fbcc4db485efd3dd6bef3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
