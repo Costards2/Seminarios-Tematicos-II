@@ -9,7 +9,7 @@ Unity: 2022.3.46f1
 Caso necessário
 
 # Informações de Download
-Link Dispositivo Android:https://drive.google.com/file/d/1_6FCBGMolJQQZ_VJ8yHoM3VHwYkfytmI/view?usp=sharing
+Link Dispositivo Android: https://drive.google.com/file/d/1BgvLswiBNSKN405rzV-VIH9Ep7mWdOkM/view?usp=sharing
 
 Só abrir e Instalar o APK
 
