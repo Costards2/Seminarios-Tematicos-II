@@ -109,7 +109,7 @@ public class Manager : MonoBehaviour
             //olho todas as perguntas de cada entrevistado
             foreach (Answer answer in response.answers) 
             {
-                if (this.idadeMin <= 13 && this.idadeMax >= 18)
+                /*if (this.idadeMin <= 13 && this.idadeMax >= 18)
                 {
                     for (int i = 0; i < response.answers.Count; i++)
                     {
@@ -122,7 +122,7 @@ public class Manager : MonoBehaviour
                             filteredResponse.userResponses.Add(response);
                         }
                     }
-                }
+                }*/
                 if (answer.response == "13 a 15 anos" & this.idadeMin <= 15) 
                 {
                     for (int i = 0; i < response.answers.Count; i++)

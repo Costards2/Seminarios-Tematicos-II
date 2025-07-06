@@ -3938,26 +3938,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
-      propertyPath: answer0
-      value: 
-      objectReference: {fileID: 1975420626}
-    - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
-      propertyPath: answer1
-      value: 
-      objectReference: {fileID: 897884243}
-    - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
-      propertyPath: answer2
-      value: 
-      objectReference: {fileID: 732216106}
-    - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
-      propertyPath: answer3
-      value: 
-      objectReference: {fileID: 1668385415}
-    - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
-      propertyPath: answer4
-      value: 
-      objectReference: {fileID: 405345761}
-    - target: {fileID: 1288250278451278876, guid: 50b9976f18ef96a5c934490f7843e9d0, type: 3}
       propertyPath: answers
       value: 
       objectReference: {fileID: 175168584}

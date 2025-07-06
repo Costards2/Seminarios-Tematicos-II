@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentQuestionID: 0
+  idQuestionStart: 6
   questionTitle: {fileID: 0}
   questionText: {fileID: 0}
   answers: {fileID: 0}
@@ -76,6 +77,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 660e61ca314358c248e9db256d61008c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userResponse:
+  respostas:
+    userResponses: []
+  newUser:
     userID: 
     answers: []
+  selectedAnswers: 0

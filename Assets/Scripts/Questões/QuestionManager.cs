@@ -10,7 +10,8 @@ public class QuestionManager : MonoBehaviour
 {
     public int currentQuestionID;
     string baseQuestionTitle = "PERGUNTA #";
-    
+
+    [SerializeField] private int idQuestionStart;
     [SerializeField] TextMeshProUGUI questionTitle; //Título
     [SerializeField] TextMeshProUGUI questionText; //Enunciado
     [SerializeField] public GameObject answers; //Alternativas
@@ -26,7 +27,7 @@ public class QuestionManager : MonoBehaviour
         else if (timer >= Time.fixedDeltaTime * 2f && timer < Time.fixedDeltaTime * 3)// Tem que ser depois de dois ciclos de fixedDeltaTime
         {
             timer = Time.fixedDeltaTime * 4;
-            currentQuestionID = 6; //Começa no 6, para pular placeholders
+            currentQuestionID = idQuestionStart; //Começa no 6, para pular placeholders
             ShowQuestion(currentQuestionID);
         }
     }
