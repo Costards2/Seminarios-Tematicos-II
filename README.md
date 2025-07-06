@@ -15,6 +15,7 @@ Após instalar o apk e fazer as pesquisas caso você queira ter acesso ao arquiv
 ![image](https://github.com/user-attachments/assets/96402ecc-3927-4bb3-b7dd-505b46126844)
 
 3 - Dentro das pasta Data haveram diverso arquivos, procure o que estiver nomeado como DefaultCompany.App_Questionario
+
 ![image](https://github.com/user-attachments/assets/30810a0c-b9f7-4243-9849-f3f9f1314253)
 
 4 - Agora você tera acesso a duas pastas, selecione a pasta Files
