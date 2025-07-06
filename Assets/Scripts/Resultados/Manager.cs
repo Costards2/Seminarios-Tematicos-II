@@ -33,9 +33,11 @@ public class Manager : MonoBehaviour
     [SerializeField] private string jsonName;
     [SerializeField] private string jsonResponseName;
     QuestManager questManager;
+    public bool eventActived;
 
     void Start()
-    {   
+    {
+        eventActived = false;
         // Lê as quests
         ReadQuests();
 
@@ -123,7 +125,7 @@ public class Manager : MonoBehaviour
                         }
                     }
                 }*/
-                if (answer.response == "13 a 15 anos" & this.idadeMin <= 15) 
+                if (answer.response == "13 a 15" & this.idadeMin <= 15) 
                 {
                     for (int i = 0; i < response.answers.Count; i++)
                     {
@@ -138,7 +140,7 @@ public class Manager : MonoBehaviour
                     }
                 }
                 
-                if (answer.response == "16 a 18 anos" && this.idadeMin > 15)
+                if (answer.response == "16 a 18" && this.idadeMin > 15)
                 {
                     for (int i = 0; i < response.answers.Count; i++) 
                     {
@@ -170,7 +172,6 @@ public class Manager : MonoBehaviour
             Debug.Log("Arquivo não encontrado");
             return null;
         }
-
     }
 
     public void NextButtom() 
@@ -178,6 +179,23 @@ public class Manager : MonoBehaviour
         actualQuest++;
         SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]);
         SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
+        /*for (int i = 0; i < filteredResponse.userResponses.Count; i++) 
+        {
+            for (int j = 0; j < filteredResponse.userResponses[j].answers.Count; j++) 
+            {
+                if (actualQuest == filteredResponse.userResponses[i].answers[j].questionID)
+                {
+                    SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
+                    eventActived = true;
+                }
+                j++;
+            }
+            i++;
+        }
+        if (eventActived == false) 
+        {
+            Debug.Log("os index da questão e da resposta não são compatíveis");
+        }else eventActived = false;*/
     }
 
     public void PreviewButtom()
@@ -185,8 +203,26 @@ public class Manager : MonoBehaviour
         if (actualQuest > idInitial) 
         {
             actualQuest--;
-            SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]); 
+            SendQuest.Invoke(actualQuestionnaire.questions[actualQuest]);
             SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
+            /*for (int i = 0; i < filteredResponse.userResponses.Count; i++)
+            {
+                for (int j = 0; j < filteredResponse.userResponses[j].answers.Count; j++)
+                {
+                    if (actualQuest == filteredResponse.userResponses[i].answers[j].questionID)
+                    {
+                        SendResponse.Invoke(actualAnswerList(filteredResponse, actualQuest));
+                        eventActived = true;
+                    }
+                    j++;
+                }
+                i++;
+            }
+            if (eventActived == false)
+            {
+                Debug.Log("os index da questão e da resposta não são compatíveis");
+            }
+            else eventActived = false;*/
         }
     }
     public void Scene(string nameScene)

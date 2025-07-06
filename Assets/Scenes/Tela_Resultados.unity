@@ -1078,6 +1078,7 @@ MonoBehaviour:
     userResponses: []
   jsonName: questionnaire
   jsonResponseName: userResponses
+  eventActived: 0
 --- !u!4 &1298479926
 Transform:
   m_ObjectHideFlags: 0
