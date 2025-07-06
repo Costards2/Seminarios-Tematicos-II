@@ -17,19 +17,19 @@ Após instalar o apk e fazer as pesquisas caso você queira ter acesso ao arquiv
 ![image](https://github.com/user-attachments/assets/96402ecc-3927-4bb3-b7dd-505b46126844)
 
 3 - Dentro das pasta Data haveram diverso arquivos, procure o que estiver nomeado como DefaultCompany.App_Questionario
-
+-
 ![image](https://github.com/user-attachments/assets/30810a0c-b9f7-4243-9849-f3f9f1314253)
 
 4 - Agora você tera acesso a duas pastas, selecione a pasta Files
-
+-
 ![image](https://github.com/user-attachments/assets/e24c2b3a-2326-4a36-a9b7-e97900b47983)
 
 5 - Nela haverá alguns arquivos, o arquivo que tem as respostas é o "userResponses"
-
+-
 ![image](https://github.com/user-attachments/assets/dba5efa2-c723-4110-972c-eb3c30404681)
-
+-
 6 - Pronto agora só abrir o Json e você tera acesso as respostas desse arquivo!
-
+-
 
 # Informações de Download
 Build Para Android:
