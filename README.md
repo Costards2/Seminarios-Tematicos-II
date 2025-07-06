@@ -1,6 +1,7 @@
-# Seminarios-Tematicos-II (Ou nome do App)
+# Seminarios-Tematicos-II (ST2)
 
 # Sobre
+App para questionário; 
 
 Unity: 2022.3.46f1
 
