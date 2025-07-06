@@ -1,6 +1,7 @@
-# Seminarios-Tematicos-II (Ou nome do App)
+# Seminarios-Tematicos-II (ST2)
 
 # Sobre
+App para questionário; 
 
 Unity: 2022.3.46f1
 
@@ -8,4 +9,8 @@ Unity: 2022.3.46f1
 Caso necessário
 
 # Informações de Download
-Caso necessário
+Link Dispositivo Android: https://drive.google.com/file/d/1BgvLswiBNSKN405rzV-VIH9Ep7mWdOkM/view?usp=sharing
+
+Só abrir e Instalar o APK
+
+
