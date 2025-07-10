@@ -140,7 +140,7 @@ public class Manager : MonoBehaviour
                     }
                 }
                 
-                if (answer.response == "16 a 18" && this.idadeMin >= 16 && this.idadeMax <= 17)
+                if (answer.response == "16 a 18" && this.idadeMin >= 16 && this.idadeMax <= 18)
                 {
                     Debug.Log("tem 16");
                     for (int i = 0; i < response.answers.Count; i++) 
