@@ -28,8 +28,8 @@ public class Manager : MonoBehaviour
     [Tooltip("Aqui você coloca o id da primeira pergunta que você quer exibir nas respostas")][SerializeField] private int idInitial;
     [HideInInspector] public questionnaire actualQuestionnaire;
     [HideInInspector] public UserResponseList responses;           // Lista contendo as respostas
-    [HideInInspector] public UserResponseList filteredResponse; // Lista contendo as respostas filtradas pela idade e sexo 
-    [HideInInspector] public UserResponseList fullFilteredList; // Lista contendo somente as questões relativas ao index atual (já está filtrada pela idade e sexo)
+     public UserResponseList filteredResponse; // Lista contendo as respostas filtradas pela idade e sexo 
+     public UserResponseList fullFilteredList; // Lista contendo somente as questões relativas ao index atual (já está filtrada pela idade e sexo)
     [SerializeField] private string jsonName;
     [SerializeField] private string jsonResponseName;
     QuestManager questManager;
@@ -125,7 +125,7 @@ public class Manager : MonoBehaviour
                         }
                     }
                 }*/
-                if (answer.response == "13 a 15" & this.idadeMin <= 15) 
+                if (answer.response == "13 a 15" && this.idadeMin >= 13 && this.idadeMax <=15) 
                 {
                     for (int i = 0; i < response.answers.Count; i++)
                     {
@@ -140,11 +140,27 @@ public class Manager : MonoBehaviour
                     }
                 }
                 
-                if (answer.response == "16 a 18" && this.idadeMin > 15)
+                if (answer.response == "16 a 18" && this.idadeMin >= 16 && this.idadeMax <= 17)
                 {
+                    Debug.Log("tem 16");
                     for (int i = 0; i < response.answers.Count; i++) 
                     {
                         if (response.answers[i].response == "Feminino" && isWoman) 
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                        if (response.answers[i].response == "Masculino" && isMan)
+                        {
+                            filteredResponse.userResponses.Add(response);
+                        }
+                    }
+                }
+
+                if (this.idadeMin <= 13 && this.idadeMax >= 17)
+                {
+                    for (int i = 0; i < response.answers.Count; i++)
+                    {
+                        if (response.answers[i].response == "Feminino" && isWoman)
                         {
                             filteredResponse.userResponses.Add(response);
                         }
